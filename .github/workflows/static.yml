@@ -34,7 +34,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/firstApp
+         path: dist/firstApp/browser
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
