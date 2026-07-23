@@ -28,9 +28,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      # ضفنا الخيار --type-check=false عشان نتجاهل حدود الحجم أثناء الـ Build
       - name: Build Angular App
-        run: npx ng build --configuration production --base-href /${{ github.event.repository.name }}/ --output-hashing=all
+        run: npx ng build --configuration production --base-href /${{ github.event.repository.name }}/ --no-progress
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
