@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master 
 permissions:
   contents: read
   pages: write
@@ -34,7 +34,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/${{ github.event.repository.name }}/browser
+          path: dist/firstApp
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
